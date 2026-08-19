@@ -1,0 +1,7 @@
+{
+  "username": "Admin",
+  "password": "admin123",
+  "post": "hello",
+  "comment": "hi, how are you",
+  "wrongpassword": "admin1234"
+}
