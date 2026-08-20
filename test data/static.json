@@ -2,6 +2,10 @@
   "username": "Admin",
   "password": "admin123",
   "post": "hello",
-  "comment": "hi, how are you",
-  "wrongpassword": "admin1234"
+  "comment": "Good Morning",
+  "wrongpassword": "admin1234",
+  "name": "Koushal",
+  "email": "koushal@gmail.com",
+  "currentAddress": "Bengaluru",
+  "permanentAddress": "Tumkur"
 }
