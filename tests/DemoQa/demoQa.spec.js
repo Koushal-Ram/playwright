@@ -95,3 +95,4 @@ test("Verify form submission using .env file", async ({ page }) => {
 
   await page.getByRole("button", { name: "Submit" }).click();
 });
+// $env:APP_FULLNAME="Koushal"; $env:APP_EMAIL="koushal@gmail.com"; $env:APP_CURRENTADDRESS="No. 1 Main Road, Tumkur"; $env:APP_PERMANENTADDRESS="No. 1 1st Cross, Bangalore";

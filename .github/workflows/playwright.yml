@@ -8,6 +8,12 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env: APP_USERNAME: ${{ secrets.APP_USERNAME }}
+         APP_PASSWORD: ${{ secrets.APP_PASSWORD }}  
+         APP_EMAIL: ${{ secrets.APP_EMAIL }}
+         APP_FULLNAME: ${{ secrets.APP_FULLNAME }}
+         APP_CURRENTADDRESS: ${{ secrets.APP_CURRENTADDRESS }}
+         APP_PERMANENTADDRESS: ${{ secrets.APP_PERMANENTADDRESS }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
