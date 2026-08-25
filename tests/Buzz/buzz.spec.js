@@ -1,17 +1,16 @@
 import { test, expect } from "@playwright/test";
 import buzz from "../../test data/static.json";
 
+const username = process.env.APP_USERNAME || buzz.username;
+const password = process.env.APP_PASSWORD || buzz.password;
+
 test("create a Buzz post", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   );
 
-  await page
-    .getByRole("textbox", { name: "Username" })
-    .fill(process.env.APP_USERNAME);
-  await page
-    .getByRole("textbox", { name: "Password" })
-    .fill(process.env.APP_PASSWORD);
+  await page.getByRole("textbox", { name: "Username" }).fill(username);
+  await page.getByRole("textbox", { name: "Password" }).fill(password);
   await page.getByRole("button", { name: "Login" }).click();
   await page.waitForURL("**/dashboard/index");
 
@@ -35,13 +34,9 @@ test("comment to a buzz post", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   );
-  await page
-    .getByRole("textbox", { name: "Username" })
-    .fill(process.env.APP_USERNAME);
+  await page.getByRole("textbox", { name: "Username" }).fill(username);
   await page.getByRole("textbox", { name: "Password" }).click();
-  await page
-    .getByRole("textbox", { name: "Password" })
-    .fill(process.env.APP_PASSWORD);
+  await page.getByRole("textbox", { name: "Password" }).fill(password);
   await page.getByRole("button", { name: "Login" }).click();
   await page.waitForURL("**/dashboard/index");
   await expect(page.getByRole("link", { name: "Buzz" })).toBeVisible();
