@@ -19,6 +19,7 @@ test("test", async ({ page }) => {
     .getByRole("textbox", { name: "Password" })
     .fill(process.env.APP_PASSWORD);
   await page.getByRole("button", { name: "Login" }).click();
+  await page.waitForURL("**/dashboard/index");
   await expect(page.getByRole("link", { name: "PIM" })).toBeVisible();
   await page.getByRole("link", { name: "PIM" }).click();
   await expect(page.getByRole("button", { name: " Add" })).toBeVisible();

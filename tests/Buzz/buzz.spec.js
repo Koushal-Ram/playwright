@@ -13,6 +13,7 @@ test("create a Buzz post", async ({ page }) => {
     .getByRole("textbox", { name: "Password" })
     .fill(process.env.APP_PASSWORD);
   await page.getByRole("button", { name: "Login" }).click();
+  await page.waitForURL("**/dashboard/index");
 
   await expect(page.getByRole("link", { name: "Buzz" })).toBeVisible();
   await page.getByRole("link", { name: "Buzz" }).click();
@@ -42,6 +43,7 @@ test("comment to a buzz post", async ({ page }) => {
     .getByRole("textbox", { name: "Password" })
     .fill(process.env.APP_PASSWORD);
   await page.getByRole("button", { name: "Login" }).click();
+  await page.waitForURL("**/dashboard/index");
   await expect(page.getByRole("link", { name: "Buzz" })).toBeVisible();
   await page.getByRole("link", { name: "Buzz" }).click();
   await expect(page.getByText("Buzz Newsfeed")).toBeVisible();
