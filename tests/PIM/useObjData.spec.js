@@ -1,41 +1,36 @@
 import { test, expect } from "@playwright/test";
 import { fakerEN_IN as faker } from "@faker-js/faker";
 
-const firstName = faker.person.firstName();
-const middleName = faker.person.middleName();
-const lastName = faker.person.lastName();
-const empId = faker.string.numeric(6);
-
 const obj = {
   employee1: {
-    firstname: firstName,
-    middlename: middleName,
-    lastname: lastName,
-    empid: empId,
+    firstname: faker.person.firstName(),
+    middlename: faker.person.middleName(),
+    lastname: faker.person.lastName(),
+    empid: faker.string.numeric(6),
   },
   employee2: {
-    firstname: firstName,
-    middlename: middleName,
-    lastname: lastName,
-    empid: empId,
+    firstname: faker.person.firstName(),
+    middlename: faker.person.middleName(),
+    lastname: faker.person.lastName(),
+    empid: faker.string.numeric(6),
   },
   employee3: {
-    firstname: firstName,
-    middlename: middleName,
-    lastname: lastName,
-    empid: empId,
+    firstname: faker.person.firstName(),
+    middlename: faker.person.middleName(),
+    lastname: faker.person.lastName(),
+    empid: faker.string.numeric(6),
   },
   employee4: {
-    firstname: firstName,
-    middlename: middleName,
-    lastname: lastName,
-    empid: empId,
+    firstname: faker.person.firstName(),
+    middlename: faker.person.middleName(),
+    lastname: faker.person.lastName(),
+    empid: faker.string.numeric(6),
   },
   employee5: {
-    firstname: firstName,
-    middlename: middleName,
-    lastname: lastName,
-    empid: empId,
+    firstname: faker.person.firstName(),
+    middlename: faker.person.middleName(),
+    lastname: faker.person.lastName(),
+    empid: faker.string.numeric(6),
   },
 };
 
